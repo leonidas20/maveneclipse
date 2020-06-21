@@ -1,19 +1,23 @@
 package com.bharath.product.dao;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.bharath.product.dto.Product;
 
-public class ProductDAOimp implements ProductDAO {
+public class ProductDAOimpl implements ProductDAO {
+	
+	Map<Integer, Product> products = new HashMap<>();
+	
 
 	@Override
 	public void create(Product product) {
-		// TODO Auto-generated method stub
-
+		products.put(product.getId(), product);
 	}
 
 	@Override
 	public Product read(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return products.get(id);
 	}
 
 	@Override
