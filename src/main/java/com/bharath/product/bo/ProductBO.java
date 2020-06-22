@@ -6,6 +6,6 @@ public interface ProductBO {
 	
 	public void create(Product product);
 
-	public void findProduct(int id);
+	public Product findProduct(int id);
 	
 }

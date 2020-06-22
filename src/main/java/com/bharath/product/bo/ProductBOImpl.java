@@ -3,7 +3,7 @@ package com.bharath.product.bo;
 import com.bharath.product.dao.ProductDAO;
 import com.bharath.product.dto.Product;
 
-public class ProductBOImple implements ProductBO {
+public class ProductBOImpl implements ProductBO {
 	
 	private ProductDAO dao;
 
@@ -13,7 +13,7 @@ public class ProductBOImple implements ProductBO {
 	}
 
 	@Override
-	public void findProduct(int id) {
+	public Product findProduct(int id) {
 		return dao.read(id);
 	}
 
